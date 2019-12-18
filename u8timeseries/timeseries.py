@@ -6,17 +6,18 @@ from typing import Tuple, Optional, Callable, Any
 
 
 class TimeSeries:
+    """
+    A TimeSeries is an immutable object defined by the following three components:
+
+    :param series: The actual time series, as a pandas Series with a proper time index.
+    :param confidence_lo: Optionally, a Pandas Series representing lower confidence interval.
+    :param confidence_hi: Optionally, a Pandas Series representing upper confidence interval.
+
+    Within this class, TimeSeries type annotations are 'TimeSeries'; see:
+    https://stackoverflow.com/questions/15853469/putting-current-class-as-return-type-annotation
+    """
+
     def __init__(self, series: pd.Series, confidence_lo: pd.Series = None, confidence_hi: pd.Series = None):
-        """
-        A TimeSeries is an immutable object defined by the following three components:
-
-        :param series: The actual time series, as a pandas Series with a proper time index.
-        :param confidence_lo: Optionally, a Pandas Series representing lower confidence interval.
-        :param confidence_hi: Optionally, a Pandas Series representing upper confidence interval.
-
-        Within this class, TimeSeries type annotations are 'TimeSeries'; see:
-        https://stackoverflow.com/questions/15853469/putting-current-class-as-return-type-annotation
-        """
 
         assert len(series) >= 1, 'Series must have at least one value.'
         assert isinstance(series.index, pd.DatetimeIndex), 'Series must be indexed with a DatetimeIndex.'
@@ -51,7 +52,7 @@ class TimeSeries:
         """
         Returns the underlying Pandas Series of this TimeSeries.
 
-        :return: A Pandas Series.
+        :return: A Pandas Series, copy of the underlying series to this TimeSeries.
         """
         return self._series.copy()
 
@@ -134,14 +135,14 @@ class TimeSeries:
 
     def split_after(self, ts: pd.Timestamp) -> Tuple['TimeSeries', 'TimeSeries']:
         """
-        Splits the TimeSeries in two, around a provided timestamp [ts].
+        Splits the TimeSeries in two, around a provided timestamp `ts`.
         
         The timestamp may not be in the TimeSeries. If it is, the timestamp will be included in the
         first of the two TimeSeries, and not in the second.
         
         :param ts: The timestamp that indicates the splitting time.
-        :return: A tuple (s1, s2) of TimeSeries with indices smaller or equal to [ts]
-                 and greater than [ts] respectively.
+        :return: A tuple `(s1, s2)` of TimeSeries with indices smaller or equal to `ts`
+                 and greater than `ts` respectively.
         """
 
         self._raise_if_not_within(ts)
@@ -153,14 +154,14 @@ class TimeSeries:
 
     def split_before(self, ts: pd.Timestamp) -> Tuple['TimeSeries', 'TimeSeries']:
         """
-        Splits a TimeSeries in two, around a provided timestamp [ts].
+        Splits a TimeSeries in two, around a provided timestamp `ts`.
 
         The timestamp may not be in the TimeSeries. If it is, the timestamp will be included in the
         second of the two TimeSeries, and not in the first.
 
         :param ts: The timestamp that indicates the splitting time.
-        :return: A tuple (s1, s2) of TimeSeries with indices smaller than [ts]
-                 and greater or equal to [ts] respectively.
+        :return: A tuple `(s1, s2)` of TimeSeries with indices smaller than `ts`
+                 and greater or equal to `ts` respectively.
         """
         self._raise_if_not_within(ts)
 
@@ -171,12 +172,12 @@ class TimeSeries:
 
     def drop_after(self, ts: pd.Timestamp) -> 'TimeSeries':
         """
-        Drops everything after the provided timestamp [ts], included.
+        Drops everything after the provided timestamp `ts`, included.
 
         The timestamp may not be in the TimeSeries. If it is, the timestamp will be dropped.
 
         :param ts: The timestamp that indicates cut-off time.
-        :return: A new TimeSeries, with indices smaller than [ts].
+        :return: A new TimeSeries, with indices smaller than `ts`.
         """
         self._raise_if_not_within(ts)
 
@@ -187,12 +188,12 @@ class TimeSeries:
 
     def drop_before(self, ts: pd.Timestamp) -> 'TimeSeries':
         """
-        Drops everything before the provided timestamp [ts], included.
+        Drops everything before the provided timestamp `ts`, included.
 
         The timestamp may not be in the TimeSeries. If it is, the timestamp will be dropped.
 
         :param ts: The timestamp that indicates cut-off time.
-        :return: A new TimeSeries, with indices greater than [ts].
+        :return: A new TimeSeries, with indices greater than `ts`.
         """
         self._raise_if_not_within(ts)
 
@@ -203,13 +204,13 @@ class TimeSeries:
 
     def slice(self, start_ts: pd.Timestamp, end_ts: pd.Timestamp) -> 'TimeSeries':
         """
-        Returns a new TimeSeries, starting later than [start_ts] and ending before [end_ts], inclusive on both ends.
+        Returns a new TimeSeries, starting later than `start_ts` and ending before `end_ts`, inclusive on both ends.
 
         The timestamps may not be in the time series. If any is, it will be included in the new time series.
 
         :param start_ts: The timestamp that indicates the left cut-off.
         :param end_ts: The timestamp that indicates the right cut-off.
-        :return: A new TimeSeries, which indices greater or equal than [start_ts] and smaller or equal than [end_ts].
+        :return: A new TimeSeries, which indices greater or equal than `start_ts` and smaller or equal than `end_ts`.
         """
 
         assert end_ts > start_ts, 'End timestamp must be strictly after start timestamp when slicing.'
@@ -228,13 +229,13 @@ class TimeSeries:
 
     def slice_n_points_after(self, start_ts: pd.Timestamp, n: int) -> 'TimeSeries':
         """
-        Returns a new TimeSeries, starting later than [start_ts] (included) and having (at most) [n] points.
+        Returns a new TimeSeries, starting later than `start_ts` (included) and having (at most) `n` points.
 
         The timestamp may not be in the time series. If it is, it will be included in the new TimeSeries.
 
         :param start_ts: The timestamp that indicates the splitting time.
         :param n: The maximal length of the new TimeSeries.
-        :return: A new TimeSeries, with length at most [n] and indices greater or equal than [start_ts].
+        :return: A new TimeSeries, with length at most `n` and indices greater or equal than `start_ts`.
         """
 
         assert n >= 0, 'n should be a positive integer.'
@@ -248,13 +249,13 @@ class TimeSeries:
 
     def slice_n_points_before(self, end_ts: pd.Timestamp, n: int) -> 'TimeSeries':
         """
-        Returns a new TimeSeries, ending before [end_ts] (included) and having (at most) [n] points.
+        Returns a new TimeSeries, ending before `end_ts` (included) and having (at most) `n` points.
 
         The timestamp may not be in the TimeSeries. If it is, it will be included in the new TimeSeries.
 
         :param end_ts: The timestamp that indicates the splitting time.
         :param n: The maximal length of the new time series.
-        :return: A new TimeSeries, with length at most [n] and indices smaller or equal than [end_ts].
+        :return: A new TimeSeries, with length at most `n` and indices smaller or equal than `end_ts`.
         """
 
         assert n >= 0, 'n should be a positive integer.'
@@ -291,10 +292,10 @@ class TimeSeries:
     def rescale_with_value(self, value_at_first_step: float) -> 'TimeSeries':
         """
         Returns a new TimeSeries, which is a multiple of this TimeSeries such that
-        the first value is [value_at_first_step].
+        the first value is `value_at_first_step`.
 
         :param value_at_first_step: The new value for the first entry of the TimeSeries.
-        :return: A new TimeSeries, whose first value was changed to [value_at_first_step] and whose others values
+        :return: A new TimeSeries, whose first value was changed to `value_at_first_step` and whose others values
                 have been scaled accordingly.
         """
 
@@ -308,11 +309,11 @@ class TimeSeries:
 
     def shift(self, n: int) -> 'TimeSeries':
         """
-        Shifts the time axis of this TimeSeries by [n] time steps.
+        Shifts the time axis of this TimeSeries by `n` time steps.
 
-        If n > 0, shifts in the future. If n < 0, shifts in the past.
+        If `n` > 0, shifts in the future. If `n` < 0, shifts in the past.
 
-        For example, with n=2 and freq='M', March 2013 becomes May 2013. With n=-2, March 2013 becomes Jan 2013.
+        For example, with `n` =2 and freq='M', March 2013 becomes May 2013. With `n` = -2, March 2013 becomes Jan 2013.
 
         :param n: The signed number of time steps to shift by.
         :return: A new TimeSeries, with a shifted index.
@@ -429,12 +430,12 @@ class TimeSeries:
                          series_b: Optional[pd.Series],
                          combine_fn: Callable[[pd.Series, pd.Series], Any]):
         """
-        Combines two Pandas Series [series_a] and [series_b] using [combine_fn] if neither is None.
+        Combines two Pandas Series `series_a` and `series_b` using `combine_fn` if neither is None.
 
         :param series_a: A Pandas Series.
         :param series_b: A Pandas Series.
         :param combine_fn: An operation with input two Pandas Series and output one Pandas Series.
-        :return: A new Pandas Series, the result of [combine_fn], or None.
+        :return: A new Pandas Series, the result of `combine_fn`, or None.
         """
 
         if series_a is not None and series_b is not None:
@@ -448,11 +449,11 @@ class TimeSeries:
     def _combine_from_pd_ops(self, other: 'TimeSeries',
                              combine_fn: Callable[[pd.Series, pd.Series], pd.Series]) -> 'TimeSeries':
         """
-        Combines this TimeSeries with another one, using the [combine_fn] on the underlying Pandas Series.
+        Combines this TimeSeries with another one, using the `combine_fn` on the underlying Pandas Series.
 
         :param other: A second TimeSeries.
         :param combine_fn: An operation with input two Pandas Series and output one Pandas Series.
-        :return: A new TimeSeries, with underlying Pandas Series the series obtained with [combine_fn].
+        :return: A new TimeSeries, with underlying Pandas Series the series obtained with `combine_fn`.
         """
 
         assert self.has_same_time_as(other), 'The two TimeSeries must have the same time index.'
@@ -492,8 +493,13 @@ class TimeSeries:
     def sum(self, axis=None, skipna=None, level=None, numeric_only=None, min_count=0, **kwargs) -> float:
         return self._series.sum(axis, skipna, level, numeric_only, min_count, **kwargs)
 
-    def autocorr(self, lag=1) -> float:
-        return self._series.autocorr(lag)
+    def autocorr(self, m=1) -> float:
+        """
+        Computes the auto-correlation of the TimeSeries  at lag `m`.
+
+        :return: The auto-correlation at lag `m`.
+        """
+        return self._series.autocorr(m)
 
     def describe(self, percentiles=None, include=None, exclude=None) -> pd.Series:
         return self._series.describe(percentiles, include, exclude)

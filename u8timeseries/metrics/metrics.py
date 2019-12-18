@@ -14,12 +14,12 @@ def get_values_or_raise(series_a: TimeSeries, series_b: TimeSeries) -> Tuple[np.
     return series_a.values(), series_b.values()
 
 
-def mape(true_series: TimeSeries, pred_series: TimeSeries):
+def mape(true_series: 'TimeSeries', pred_series: 'TimeSeries') -> float:
     """
-    Computes the Mean Absolute Percentage Error of `true_series` and `pred_series`
+    Computes the Mean Absolute Percentage Error (MAPE) of `true_series` and `pred_series`.
 
-    :param true_series: The series to match
-    :param pred_series: The predicred values
+    :param true_series: The series to match.
+    :param pred_series: The predicted values.
 
     :return: The MAPE.
     """

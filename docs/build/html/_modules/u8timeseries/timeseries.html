@@ -1,40 +1,148 @@
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta charset="utf-8" />
-    <title>u8timeseries.timeseries &#8212; u8timeseries v0.0.0.1 documentation</title>
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>u8timeseries.timeseries &mdash; u8timeseries v0.0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
     
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">u8timeseries v0.0.0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li> 
-      </ul>
-    </div>  
+</head>
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> u8timeseries
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../u8timeseries.timeseries.html">TimeSeries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../u8timeseries.models.html">Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../u8timeseries.metrics.html">Metrics</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">u8timeseries</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>u8timeseries.timeseries</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <h1>Source code for u8timeseries.timeseries</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -45,17 +153,18 @@
 
 
 <div class="viewcode-block" id="TimeSeries"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries">[docs]</a><span class="k">class</span> <span class="nc">TimeSeries</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A TimeSeries is an immutable object defined by the following three components:</span>
+
+<span class="sd">    :param series: The actual time series, as a pandas Series with a proper time index.</span>
+<span class="sd">    :param confidence_lo: Optionally, a Pandas Series representing lower confidence interval.</span>
+<span class="sd">    :param confidence_hi: Optionally, a Pandas Series representing upper confidence interval.</span>
+
+<span class="sd">    Within this class, TimeSeries type annotations are &#39;TimeSeries&#39;; see:</span>
+<span class="sd">    https://stackoverflow.com/questions/15853469/putting-current-class-as-return-type-annotation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">confidence_lo</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">confidence_hi</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        A TimeSeries is an immutable object defined by the following three components:</span>
-
-<span class="sd">        :param series: The actual time series, as a pandas Series with a proper time index.</span>
-<span class="sd">        :param confidence_lo: Optionally, a Pandas Series representing lower confidence interval.</span>
-<span class="sd">        :param confidence_hi: Optionally, a Pandas Series representing upper confidence interval.</span>
-
-<span class="sd">        Within this class, TimeSeries type annotations are &#39;TimeSeries&#39;; see:</span>
-<span class="sd">        https://stackoverflow.com/questions/15853469/putting-current-class-as-return-type-annotation</span>
-<span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">series</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;Series must have at least one value.&#39;</span>
         <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DatetimeIndex</span><span class="p">),</span> <span class="s1">&#39;Series must be indexed with a DatetimeIndex.&#39;</span>
@@ -90,7 +199,7 @@
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns the underlying Pandas Series of this TimeSeries.</span>
 
-<span class="sd">        :return: A Pandas Series.</span>
+<span class="sd">        :return: A Pandas Series, copy of the underlying series to this TimeSeries.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_series</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span></div>
 
@@ -173,14 +282,14 @@
 
 <div class="viewcode-block" id="TimeSeries.split_after"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.split_after">[docs]</a>    <span class="k">def</span> <span class="nf">split_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="s1">&#39;TimeSeries&#39;</span><span class="p">,</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Splits the TimeSeries in two, around a provided timestamp [ts].</span>
+<span class="sd">        Splits the TimeSeries in two, around a provided timestamp `ts`.</span>
 <span class="sd">        </span>
 <span class="sd">        The timestamp may not be in the TimeSeries. If it is, the timestamp will be included in the</span>
 <span class="sd">        first of the two TimeSeries, and not in the second.</span>
 <span class="sd">        </span>
 <span class="sd">        :param ts: The timestamp that indicates the splitting time.</span>
-<span class="sd">        :return: A tuple (s1, s2) of TimeSeries with indices smaller or equal to [ts]</span>
-<span class="sd">                 and greater than [ts] respectively.</span>
+<span class="sd">        :return: A tuple `(s1, s2)` of TimeSeries with indices smaller or equal to `ts`</span>
+<span class="sd">                 and greater than `ts` respectively.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_if_not_within</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
@@ -192,14 +301,14 @@
 
 <div class="viewcode-block" id="TimeSeries.split_before"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.split_before">[docs]</a>    <span class="k">def</span> <span class="nf">split_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="s1">&#39;TimeSeries&#39;</span><span class="p">,</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">]:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Splits a TimeSeries in two, around a provided timestamp [ts].</span>
+<span class="sd">        Splits a TimeSeries in two, around a provided timestamp `ts`.</span>
 
 <span class="sd">        The timestamp may not be in the TimeSeries. If it is, the timestamp will be included in the</span>
 <span class="sd">        second of the two TimeSeries, and not in the first.</span>
 
 <span class="sd">        :param ts: The timestamp that indicates the splitting time.</span>
-<span class="sd">        :return: A tuple (s1, s2) of TimeSeries with indices smaller than [ts]</span>
-<span class="sd">                 and greater or equal to [ts] respectively.</span>
+<span class="sd">        :return: A tuple `(s1, s2)` of TimeSeries with indices smaller than `ts`</span>
+<span class="sd">                 and greater or equal to `ts` respectively.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_if_not_within</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
 
@@ -210,12 +319,12 @@
 
 <div class="viewcode-block" id="TimeSeries.drop_after"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.drop_after">[docs]</a>    <span class="k">def</span> <span class="nf">drop_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Drops everything after the provided timestamp [ts], included.</span>
+<span class="sd">        Drops everything after the provided timestamp `ts`, included.</span>
 
 <span class="sd">        The timestamp may not be in the TimeSeries. If it is, the timestamp will be dropped.</span>
 
 <span class="sd">        :param ts: The timestamp that indicates cut-off time.</span>
-<span class="sd">        :return: A new TimeSeries, with indices smaller than [ts].</span>
+<span class="sd">        :return: A new TimeSeries, with indices smaller than `ts`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_if_not_within</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
 
@@ -226,12 +335,12 @@
 
 <div class="viewcode-block" id="TimeSeries.drop_before"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.drop_before">[docs]</a>    <span class="k">def</span> <span class="nf">drop_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Drops everything before the provided timestamp [ts], included.</span>
+<span class="sd">        Drops everything before the provided timestamp `ts`, included.</span>
 
 <span class="sd">        The timestamp may not be in the TimeSeries. If it is, the timestamp will be dropped.</span>
 
 <span class="sd">        :param ts: The timestamp that indicates cut-off time.</span>
-<span class="sd">        :return: A new TimeSeries, with indices greater than [ts].</span>
+<span class="sd">        :return: A new TimeSeries, with indices greater than `ts`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_raise_if_not_within</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
 
@@ -242,13 +351,13 @@
 
 <div class="viewcode-block" id="TimeSeries.slice"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.slice">[docs]</a>    <span class="k">def</span> <span class="nf">slice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">,</span> <span class="n">end_ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns a new TimeSeries, starting later than [start_ts] and ending before [end_ts], inclusive on both ends.</span>
+<span class="sd">        Returns a new TimeSeries, starting later than `start_ts` and ending before `end_ts`, inclusive on both ends.</span>
 
 <span class="sd">        The timestamps may not be in the time series. If any is, it will be included in the new time series.</span>
 
 <span class="sd">        :param start_ts: The timestamp that indicates the left cut-off.</span>
 <span class="sd">        :param end_ts: The timestamp that indicates the right cut-off.</span>
-<span class="sd">        :return: A new TimeSeries, which indices greater or equal than [start_ts] and smaller or equal than [end_ts].</span>
+<span class="sd">        :return: A new TimeSeries, which indices greater or equal than `start_ts` and smaller or equal than `end_ts`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="n">end_ts</span> <span class="o">&gt;</span> <span class="n">start_ts</span><span class="p">,</span> <span class="s1">&#39;End timestamp must be strictly after start timestamp when slicing.&#39;</span>
@@ -267,13 +376,13 @@
 
 <div class="viewcode-block" id="TimeSeries.slice_n_points_after"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.slice_n_points_after">[docs]</a>    <span class="k">def</span> <span class="nf">slice_n_points_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start_ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns a new TimeSeries, starting later than [start_ts] (included) and having (at most) [n] points.</span>
+<span class="sd">        Returns a new TimeSeries, starting later than `start_ts` (included) and having (at most) `n` points.</span>
 
 <span class="sd">        The timestamp may not be in the time series. If it is, it will be included in the new TimeSeries.</span>
 
 <span class="sd">        :param start_ts: The timestamp that indicates the splitting time.</span>
 <span class="sd">        :param n: The maximal length of the new TimeSeries.</span>
-<span class="sd">        :return: A new TimeSeries, with length at most [n] and indices greater or equal than [start_ts].</span>
+<span class="sd">        :return: A new TimeSeries, with length at most `n` and indices greater or equal than `start_ts`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;n should be a positive integer.&#39;</span>
@@ -287,13 +396,13 @@
 
 <div class="viewcode-block" id="TimeSeries.slice_n_points_before"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.slice_n_points_before">[docs]</a>    <span class="k">def</span> <span class="nf">slice_n_points_before</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">end_ts</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Returns a new TimeSeries, ending before [end_ts] (included) and having (at most) [n] points.</span>
+<span class="sd">        Returns a new TimeSeries, ending before `end_ts` (included) and having (at most) `n` points.</span>
 
 <span class="sd">        The timestamp may not be in the TimeSeries. If it is, it will be included in the new TimeSeries.</span>
 
 <span class="sd">        :param end_ts: The timestamp that indicates the splitting time.</span>
 <span class="sd">        :param n: The maximal length of the new time series.</span>
-<span class="sd">        :return: A new TimeSeries, with length at most [n] and indices smaller or equal than [end_ts].</span>
+<span class="sd">        :return: A new TimeSeries, with length at most `n` and indices smaller or equal than `end_ts`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;n should be a positive integer.&#39;</span>
@@ -330,10 +439,10 @@
 <div class="viewcode-block" id="TimeSeries.rescale_with_value"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.rescale_with_value">[docs]</a>    <span class="k">def</span> <span class="nf">rescale_with_value</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value_at_first_step</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a new TimeSeries, which is a multiple of this TimeSeries such that</span>
-<span class="sd">        the first value is [value_at_first_step].</span>
+<span class="sd">        the first value is `value_at_first_step`.</span>
 
 <span class="sd">        :param value_at_first_step: The new value for the first entry of the TimeSeries.</span>
-<span class="sd">        :return: A new TimeSeries, whose first value was changed to [value_at_first_step] and whose others values</span>
+<span class="sd">        :return: A new TimeSeries, whose first value was changed to `value_at_first_step` and whose others values</span>
 <span class="sd">                have been scaled accordingly.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
@@ -347,11 +456,11 @@
 
 <div class="viewcode-block" id="TimeSeries.shift"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.shift">[docs]</a>    <span class="k">def</span> <span class="nf">shift</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Shifts the time axis of this TimeSeries by [n] time steps.</span>
+<span class="sd">        Shifts the time axis of this TimeSeries by `n` time steps.</span>
 
-<span class="sd">        If n &gt; 0, shifts in the future. If n &lt; 0, shifts in the past.</span>
+<span class="sd">        If `n` &gt; 0, shifts in the future. If `n` &lt; 0, shifts in the past.</span>
 
-<span class="sd">        For example, with n=2 and freq=&#39;M&#39;, March 2013 becomes May 2013. With n=-2, March 2013 becomes Jan 2013.</span>
+<span class="sd">        For example, with `n` =2 and freq=&#39;M&#39;, March 2013 becomes May 2013. With `n` = -2, March 2013 becomes Jan 2013.</span>
 
 <span class="sd">        :param n: The signed number of time steps to shift by.</span>
 <span class="sd">        :return: A new TimeSeries, with a shifted index.</span>
@@ -468,12 +577,12 @@
                          <span class="n">series_b</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span>
                          <span class="n">combine_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span> <span class="n">Any</span><span class="p">]):</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Combines two Pandas Series [series_a] and [series_b] using [combine_fn] if neither is None.</span>
+<span class="sd">        Combines two Pandas Series `series_a` and `series_b` using `combine_fn` if neither is None.</span>
 
 <span class="sd">        :param series_a: A Pandas Series.</span>
 <span class="sd">        :param series_b: A Pandas Series.</span>
 <span class="sd">        :param combine_fn: An operation with input two Pandas Series and output one Pandas Series.</span>
-<span class="sd">        :return: A new Pandas Series, the result of [combine_fn], or None.</span>
+<span class="sd">        :return: A new Pandas Series, the result of `combine_fn`, or None.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">if</span> <span class="n">series_a</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">series_b</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -487,11 +596,11 @@
     <span class="k">def</span> <span class="nf">_combine_from_pd_ops</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">:</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">,</span>
                              <span class="n">combine_fn</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">],</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="s1">&#39;TimeSeries&#39;</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Combines this TimeSeries with another one, using the [combine_fn] on the underlying Pandas Series.</span>
+<span class="sd">        Combines this TimeSeries with another one, using the `combine_fn` on the underlying Pandas Series.</span>
 
 <span class="sd">        :param other: A second TimeSeries.</span>
 <span class="sd">        :param combine_fn: An operation with input two Pandas Series and output one Pandas Series.</span>
-<span class="sd">        :return: A new TimeSeries, with underlying Pandas Series the series obtained with [combine_fn].</span>
+<span class="sd">        :return: A new TimeSeries, with underlying Pandas Series the series obtained with `combine_fn`.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
 
         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">has_same_time_as</span><span class="p">(</span><span class="n">other</span><span class="p">),</span> <span class="s1">&#39;The two TimeSeries must have the same time index.&#39;</span>
@@ -531,8 +640,13 @@
 <div class="viewcode-block" id="TimeSeries.sum"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.sum">[docs]</a>    <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">skipna</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">level</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">numeric_only</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">min_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_series</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="p">,</span> <span class="n">skipna</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">numeric_only</span><span class="p">,</span> <span class="n">min_count</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="TimeSeries.autocorr"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.autocorr">[docs]</a>    <span class="k">def</span> <span class="nf">autocorr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">lag</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_series</span><span class="o">.</span><span class="n">autocorr</span><span class="p">(</span><span class="n">lag</span><span class="p">)</span></div>
+<div class="viewcode-block" id="TimeSeries.autocorr"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.autocorr">[docs]</a>    <span class="k">def</span> <span class="nf">autocorr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Computes the auto-correlation of the TimeSeries  at lag `m`.</span>
+
+<span class="sd">        :return: The auto-correlation at lag `m`.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_series</span><span class="o">.</span><span class="n">autocorr</span><span class="p">(</span><span class="n">m</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="TimeSeries.describe"><a class="viewcode-back" href="../../u8timeseries.timeseries.html#u8timeseries.timeseries.TimeSeries.describe">[docs]</a>    <span class="k">def</span> <span class="nf">describe</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">percentiles</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">include</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_series</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">percentiles</span><span class="p">,</span> <span class="n">include</span><span class="p">,</span> <span class="n">exclude</span><span class="p">)</span></div>
@@ -665,41 +779,43 @@
         <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Freq: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">freq_str</span><span class="p">())</span></div>
 </pre></div>
 
+           </div>
+           
           </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, unit8
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="../../genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="../../py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">u8timeseries v0.0.0.1 documentation</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2019, unit8.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.0.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
 </html>
