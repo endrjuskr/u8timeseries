@@ -28,6 +28,14 @@ def mape(true_series: 'TimeSeries', pred_series: 'TimeSeries') -> float:
 
 
 def mase(true_series: TimeSeries, pred_series: TimeSeries):
+    """
+    Computes the Mean Absolute Standard Error (MASE)    Computes the Mean Absolute Percentage Error (MAPE) of `true_series` and `pred_series`.
+
+    :param true_series: The series to match.
+    :param pred_series: The predicted values.
+
+    :return: The MASE.
+    """
     y_true, y_pred = get_values_or_raise(true_series, pred_series)
     errors = np.sum(np.abs(y_true - y_pred))
     t = y_true.size
