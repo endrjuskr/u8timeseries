@@ -470,6 +470,11 @@ class TimeSeries:
     """
 
     def mean(self, axis=None, skipna=None, level=None, numeric_only=None, **kwargs) -> float:
+        """
+        Currently a wrapper around the pandas `mean`method.
+
+        :return: The mean value of the Timeseries.
+        """
         return self._series.mean(axis, skipna, level, numeric_only, **kwargs)
 
     def var(self, axis=None, skipna=None, level=None, ddof=1, numeric_only=None, **kwargs) -> float:
