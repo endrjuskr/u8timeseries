@@ -19,7 +19,15 @@
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('..'))
+
+# To set the abspath below, we assume that the tree of the directory is as follows:
+#
+# u8timeseries
+# docs
+#  |___ source
+#          |____ conf.py
+#
+sys.path.insert(0, os.path.abspath('../../'))
 
 
 # -- Project information -----------------------------------------------------
