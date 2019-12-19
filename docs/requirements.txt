@@ -1,5 +1,6 @@
 wheel
 numpy
+Cython
 pystan
 scikit-learn
 scipy
