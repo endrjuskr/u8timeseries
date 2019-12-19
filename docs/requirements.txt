@@ -1,7 +1,4 @@
-wheel
-gcc7
-numpy>=1.16
-numpy.distutils
+numpy
 #Cython
 #pystan
 scikit-learn
