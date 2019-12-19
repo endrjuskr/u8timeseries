@@ -1,14 +1,14 @@
-numpy ; python_version == '3.7.5'
-Cython ; python_version == '3.7.5'
-scikit-learn ; python_version == '3.7.5'
-scipy ; python_version == '3.7.5'
-dateutils ; python_version == '3.7.5'
-statsmodels ; python_version == '3.7.5'
-matplotlib ; python_version == '3.7.5'
-pandas ; python_version == '3.7.5'
-tqdm ; python_version == '3.7.5'
-joblib ; python_version == '3.7.5'
-plotly ; python_version == '3.7.5'
-fbprophet ; python_version == '3.7.5'
-pmdarima ; python_version == '3.7.5'
-pystan ; python_version == '3.7.5'
+numpy
+Cython
+scikit-learn
+scipy
+dateutils
+statsmodels
+matplotlib
+pandas
+tqdm
+joblib
+plotly
+fbprophet
+pmdarima
+pystan
