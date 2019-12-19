@@ -1,4 +1,4 @@
-name: "Pull Request Docs Check"
+name: "Push/Pull Request Docs Build"
 on: 
 - pull_request
 - push
@@ -15,8 +15,7 @@ jobs:
     - name: Install numpy
       run: >-
         python -m
-        pip install
-        numpy
+        pip3 install numpy
     - uses: ammaraskar/sphinx-action@master
       with:
         args: "docs/"
