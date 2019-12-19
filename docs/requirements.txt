@@ -1,14 +1,14 @@
-numpy
-#Cython
-scikit-learn
-scipy
-dateutils
-statsmodels
-matplotlib
-pandas
-tqdm
-joblib
-plotly
-fbprophet
-pmdarima
-pystan
+numpy ; python_version < '3.8'
+Cython ; python_version < '3.8'
+scikit-learn ; python_version < '3.8'
+scipy ; python_version < '3.8'
+dateutils ; python_version < '3.8'
+statsmodels ; python_version < '3.8'
+matplotlib ; python_version < '3.8'
+pandas ; python_version < '3.8'
+tqdm ; python_version < '3.8'
+joblib ; python_version < '3.8'
+plotly ; python_version < '3.8'
+fbprophet ; python_version < '3.8'
+pmdarima ; python_version < '3.8'
+pystan ; python_version < '3.8'
