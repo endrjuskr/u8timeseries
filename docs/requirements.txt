@@ -1,6 +1,5 @@
-#numpy
+numpy
 #Cython
-#pystan
 scikit-learn
 scipy
 dateutils
@@ -10,5 +9,6 @@ pandas
 tqdm
 joblib
 plotly
-#fbprophet
-#pmdarima
+fbprophet
+pmdarima
+pystan
