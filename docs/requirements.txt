@@ -1,3 +1,4 @@
+wheel
 numpy
 pystan
 scikit-learn
