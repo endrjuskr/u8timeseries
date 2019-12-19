@@ -1,5 +1,5 @@
 wheel
-gcc
+gcc7
 numpy
 #Cython
 #pystan
