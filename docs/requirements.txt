@@ -5,7 +5,6 @@ numpy
 #pystan
 scikit-learn
 scipy
-pmdarima
 dateutils
 statsmodels
 matplotlib
@@ -14,3 +13,4 @@ tqdm
 joblib
 plotly
 #fbprophet
+pmdarima
