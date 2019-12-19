@@ -13,4 +13,4 @@ tqdm
 joblib
 plotly
 #fbprophet
-pmdarima
+pmdarima==1.2.0
