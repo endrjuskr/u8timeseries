@@ -1,6 +1,7 @@
 wheel
 gcc7
 numpy>=1.16
+numpy.distutils
 #Cython
 #pystan
 scikit-learn
@@ -13,4 +14,4 @@ tqdm
 joblib
 plotly
 #fbprophet
-pyramid-arima
+pmdarima
