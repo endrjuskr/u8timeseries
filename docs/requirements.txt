@@ -1,4 +1,5 @@
 wheel
+gcc
 numpy
 #Cython
 #pystan
