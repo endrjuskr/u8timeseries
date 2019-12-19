@@ -15,7 +15,7 @@ jobs:
     - name: Install numpy
       run: >-
         python -m
-        pip3 install numpy
-    - uses: ammaraskar/sphinx-action@master
+        pip install numpy
+    - uses: ammaraskar/sphinx-action@v1
       with:
         args: "docs/"
