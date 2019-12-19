@@ -1,6 +1,6 @@
 wheel
 gcc7
-numpy
+numpy>=1.16
 #Cython
 #pystan
 scikit-learn
