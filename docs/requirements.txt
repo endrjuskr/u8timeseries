@@ -4,7 +4,7 @@ numpy
 #pystan
 scikit-learn
 scipy
-#pmdarima
+pmdarima
 dateutils
 statsmodels
 matplotlib
