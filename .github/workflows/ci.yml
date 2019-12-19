@@ -22,4 +22,5 @@ jobs:
         pip install pmdarima 
     - uses: ammaraskar/sphinx-action@master
       with:
+        python-version: 3.7
         args: "docs/"
