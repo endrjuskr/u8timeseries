@@ -5,16 +5,14 @@ on:
 
 jobs:
   docs:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
     - uses: actions/checkout@v1 
-    - name: Set up Python 3.7
+    - name: Set up Python 3.7.5
       uses: actions/setup-python@v1
       with:
         python-version: '3.7.5'
     - uses: ammaraskar/sphinx-action@master
       with:
-        args: "docs/"
-    - uses: ammaraskar/sphinx-action@master
-      with:
+        python-version: '3.7.5'
         args: "docs/"
