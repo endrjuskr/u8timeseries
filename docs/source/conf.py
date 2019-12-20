@@ -19,6 +19,7 @@
 
 import os
 import sys
+import u8timeseries
 
 # To set the abspath below, we assume that the tree of the directory is as follows:
 #
@@ -76,4 +77,4 @@ html_theme = 'default'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']
