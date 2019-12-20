@@ -19,7 +19,6 @@
 
 import os
 import sys
-import u8timeseries
 
 # To set the abspath below, we assume that the tree of the directory is as follows:
 #
@@ -30,6 +29,7 @@ import u8timeseries
 #
 sys.path.insert(0, os.path.abspath('../../'))
 
+import u8timeseries
 
 # -- Project information -----------------------------------------------------
 
