@@ -1,8 +1,10 @@
-from ..timeseries import TimeSeries
-from ..custom_logging import raise_log, get_logger
 from typing import List
 
+from ..custom_logging import raise_log, get_logger
+from ..timeseries import TimeSeries
+
 logger = get_logger(__name__)
+
 
 def retain_period_common_to_all(series: List[TimeSeries]) -> List[TimeSeries]:
     """
