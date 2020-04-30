@@ -178,8 +178,8 @@
     text-align: unset;
 }
 </style>
-<a class="reference external image-reference" href="images/logo-72dpi.png"><img alt="u8timeseries" src="images/logo-72dpi.png" /></a>
-<a class="reference external image-reference" href="https://github.com/unit8co/u8timeseries/workflows/ci_workflow/badge.svg"><img alt="ci_workflow" src="https://github.com/unit8co/u8timeseries/workflows/ci_workflow/badge.svg" /></a>
+<a class="reference external image-reference" href="static/images/logo-72dpi.png"><img alt="u8timeseries" src="static/images/logo-72dpi.png" /></a>
+<a class="reference external image-reference" href="https://github.com/unit8co/u8timeseries/workflows/workflow/badge.svg"><img alt="ci_workflow" src="https://github.com/unit8co/u8timeseries/workflows/workflow/badge.svg" /></a>
 <p><strong>u8timeseries</strong> is a python library for easy manipulation and forecasting time series in python.
 It contains a variety of models, from classics such as ARIMA to neural networks.
 The models can all be used in the same way, using <code class="docutils literal notranslate"><span class="pre">fit()</span></code> and <code class="docutils literal notranslate"><span class="pre">predict()</span></code> functions,
@@ -204,12 +204,13 @@ and combine the predictions of several models and external regressors.</p>
 <p>This approach most likely requires other non-Python dependencies.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">.</span>
 <span class="c1"># install any additional dev requirements, e.g.:</span>
-<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">/</span><span class="n">docs</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">/</span><span class="n">dev</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p><strong>Running the examples only without installing:</strong></p>
 <p>To run the example notebooks without installing, using Docker, you can also run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">./</span><span class="n">build_docker</span><span class="o">.</span><span class="n">sh</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">run_docker</span><span class="o">.</span><span class="n">sh</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">scripts</span>
+<span class="o">./</span><span class="n">build_docker</span><span class="o">.</span><span class="n">sh</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">run_docker</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 <p>Then copy and paste the URL provided by the docker container into your browser to access Jupyter notebook.</p>
@@ -243,7 +244,7 @@ and combine the predictions of several models and external regressors.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<a class="reference external image-reference" href="images/example.png"><img alt="example" src="images/example.png" /></a>
+<a class="reference external image-reference" href="static/images/example.png"><img alt="example" src="static/images/example.png" /></a>
 <p>We invite you to go over the example notebooks in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory.</p>
 </div>
 <div class="section" id="documentation">
