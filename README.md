@@ -66,6 +66,7 @@ prediction.plot(label='forecast', lw=3)
 plt.legend()
 plt.xlabel('Year')
 ```
+
 ![example](static/images/example.png "example")
 
 We invite you to go over the example notebooks in the `examples` directory.
@@ -92,7 +93,6 @@ from R2-scores to Mean Absolute Scaled Error.
 
 **Regressive Models:** Possibility to predict a time series from several other time series 
 (e.g., external regressors), using arbitrary regressive models.
-
 
 ## Contribute
 The development is ongoing, and there are many new features that we want to add. 
