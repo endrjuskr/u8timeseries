@@ -9,7 +9,7 @@ def read_requirements(path):
 
 setup(
       name='u8timeseries',
-      version="dev",
+      version="1.0.0",
       description='A collection of easy-to-use timeseries forecasting models',
       url='http://github.com/unit8co/u8timeseries',
       author='Unit8 SA',
